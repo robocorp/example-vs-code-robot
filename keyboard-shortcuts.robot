@@ -19,29 +19,40 @@ Create new robot dir
 Open VS Code
     [Arguments]    ${dir}
     Run    code ${dir}
-    Sleep    3s
+    Wait for text    Run a Command...
 
 Open Command Palette
     Press Keys    ctrl    shift    p
-    Sleep    1s
 
 Create robot
-    Type    robocorp-create-robot    5s
+    Type and run    robocorp-create-robot
+    Wait for text    Update env
+    Wait for text to disappear    Update env
 
 Select standard template
-    Type    standard    1s
+    Wait for text    Standard
+    Type and run    standard
 
 Enter robot name
-    Type    marias-robot    1s
+    Wait for text    Please provide the name
+    Type and run    marias-robot
+    Wait for text    Robot successfully created
 
 Run robot
-    Type    robocorp-run-robot    1s
+    Type and run    robocorp-run-robot
 
-Type
-    [Arguments]    ${text}    ${sleep}
+Type and run
+    [Arguments]    ${text}
     Send Keys    ${text}
     Press Keys    enter
-    Sleep    ${sleep}
+
+Wait for text
+    [Arguments]    ${text}
+    RPA.Desktop.Wait For Element    ocr:"${text}"
+
+Wait for text to disappear
+    [Arguments]    ${text}
+    RPA.Desktop.Wait For Element    not ocr:"${text}"
 
 *** Tasks ***
 Create and run a new robot using VS Code UI and keyboard shortcuts
