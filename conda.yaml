@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.7.5
+  - pip=20.1
+  - pip:
+    #- rpaframework==10.0.6
+    - https://robocorp:freeasinbeer@devpi.robocorp.cloud/ci/test/+f/c2d/013da3ed9f409/rpaframework-10.0.7-py3-none-any.whl
+    - rpaframework-recognition==0.7.2

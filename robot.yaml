@@ -1,0 +1,14 @@
+tasks:
+  Use image locators:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" image-locators.robot
+  Use keyboard shortcuts:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" keyboard-shortcuts.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
