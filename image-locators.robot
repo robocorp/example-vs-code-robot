@@ -17,7 +17,7 @@ Setup
     Set Default Timeout    30.0
 
 Open VS Code
-    RPA.Desktop.Windows.Open From Search    vscode    Visual Studio Code
+    RPA.Desktop.Windows.Open From Search    vscode    Getting Started - Visual Studio Code
 
 Open folder
     Wait and click    alias:VSCode.OpenFolder
