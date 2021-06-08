@@ -1,8 +1,6 @@
 *** Settings ***
-Documentation     Create and run a new robot using VS Code UI and keyboard
-...               shortcuts. This robot is less brittle when compared to the
-...               image locator based robot since visual UI changes will not
-...               affect it.
+Documentation     Creates and runs a new robot using VS Code UI. Uses keyboard
+...               shortcuts and OCR (optical character recognition).
 Resource          common.robot
 
 *** Keywords ***

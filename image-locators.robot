@@ -1,9 +1,10 @@
 *** Settings ***
-Documentation     Create and run a new robot using VS Code UI and image
-...               locators. This robot works (for now), but is quite
-...               brittle. For example, switching from dark to light theme in
-...               VS Code UI would break the robot since it would not be able
-...               to find the elements based on the screenshots.
+Documentation     Creates and runs a new robot using VS Code UI. Uses image
+...               locators and OCR (optical character recognition). This robot
+...               works (for now), but is quite brittle. For example, switching
+...               from dark to light theme in VS Code UI would break the robot
+...               since it would not be able to find the elements based on the
+...               screenshots (that were taken using the dark theme).
 Resource          common.robot
 Task Setup        Setup
 
