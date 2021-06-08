@@ -6,7 +6,7 @@ Library           String
 *** Keywords ***
 Create new robot dir
     ${random_string}=    Generate Random String    chars=\[LOWER\]
-    ${new_robot_dir}=    Set Variable    %{USERPROFILE}${/}generated-robot-${random_string}
+    ${new_robot_dir}=    Set Variable    ${TEMPDIR}${/}generated-robot-${random_string}
     Create Directory    ${new_robot_dir}
     Wait Until Created    ${new_robot_dir}
     [Return]    ${new_robot_dir}
