@@ -1,19 +1,4 @@
 {
-    "VSCode.OpenFolder": {
-        "confidence": 80.0,
-        "path": ".images/OpenFolder.png",
-        "type": "image"
-    },
-    "Windows.NewFolder": {
-        "confidence": 80.0,
-        "path": ".images/NewFolder.png",
-        "type": "image"
-    },
-    "Windows.SelectFolder": {
-        "confidence": 80.0,
-        "path": ".images/SelectFolder.png",
-        "type": "image"
-    },
     "VSCode.RunCommand": {
         "confidence": 80.0,
         "path": ".images/RunCommand.png",

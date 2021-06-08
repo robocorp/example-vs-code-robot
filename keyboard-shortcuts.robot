@@ -3,24 +3,9 @@ Documentation     Create and run a new robot using VS Code UI and keyboard
 ...               shortcuts. This robot is less brittle when compared to the
 ...               image locator based robot since visual UI changes will not
 ...               affect it.
-Library           OperatingSystem
-Library           RPA.Desktop
-Library           RPA.Desktop.Windows
-Library           String
+Resource          common.robot
 
 *** Keywords ***
-Create new robot dir
-    ${random_string}=    Generate Random String    chars=\[LOWER\]
-    ${new_robot_dir}=    Set Variable    %{USERPROFILE}${/}generated-robot-${random_string}
-    Create Directory    ${new_robot_dir}
-    Wait Until Created    ${new_robot_dir}
-    [Return]    ${new_robot_dir}
-
-Open VS Code
-    [Arguments]    ${dir}
-    Run    code ${dir}
-    Wait for text    Run a Command...
-
 Open Command Palette
     Press Keys    ctrl    shift    p
 
@@ -40,19 +25,6 @@ Enter robot name
 
 Run robot
     Type and run    robocorp-run-robot
-
-Type and run
-    [Arguments]    ${text}
-    Send Keys    ${text}
-    Press Keys    enter
-
-Wait for text
-    [Arguments]    ${text}
-    RPA.Desktop.Wait For Element    ocr:"${text}"
-
-Wait for text to disappear
-    [Arguments]    ${text}
-    RPA.Desktop.Wait For Element    not ocr:"${text}"
 
 *** Tasks ***
 Create and run a new robot using VS Code UI and keyboard shortcuts
